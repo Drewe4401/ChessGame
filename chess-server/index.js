@@ -1,4 +1,3 @@
-const functions = require("firebase-functions");
 const express = require("express");
 const app = express();
 const server = require("http").createServer(app);
@@ -53,4 +52,7 @@ io.on("connection", (socket) => {
   });
 });
 
-exports.app = functions.https.onRequest(app);
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
