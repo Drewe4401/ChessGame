@@ -1,18 +1,20 @@
-const functions = require("firebase-functions");
 const express = require("express");
-const app = express();
-const server = require("http").createServer(app);
+const http = require("http");
+const socketIO = require("socket.io");
 const cors = require("cors");
+
+const app = express();
 app.use(cors());
 
-const io = require("socket.io")(server, {
+const server = http.createServer(app);
+const io = socketIO(server, {
   cors: {
-    origin: "*",
+    origin: "http://localhost:3000",
     methods: ["GET", "POST"],
-    allowedHeaders: ["my-custom-header"],
-    credentials: true,
   },
 });
+
+const PORT = process.env.PORT || 3001;
 
 const rooms = new Map();
 
@@ -62,12 +64,5 @@ io.on("connection", (socket) => {
 });
 
 
-const wrapped = functions.https.onRequest((req, res) => {
-  if (req.path === "/") {
-    req.url = "/index.html";
-  }
-  return app(req, res);
-});
 
-wrapped.io = io;
-exports.myFunction = wrapped;
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

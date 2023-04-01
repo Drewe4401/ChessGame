@@ -4,7 +4,8 @@ import {Chess} from "chess.js";
 import styles from './chessboard.module.css';
 import io from "socket.io-client";
 
-const socket = io("https://us-central1-chessboardgamedrewe.cloudfunctions.net/myFunction");
+
+const socket = io("http://localhost:3001");
 
 function ChessBoard() {
   const gameRef = useRef(new Chess());
