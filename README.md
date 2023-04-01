@@ -10,17 +10,17 @@ A responsive and real-time chess game built using React, Chessboardjsx, and Sock
 
 ## Features
 
-Real-time chess game with a responsive board
-Support for two players connected via Socket.io
-Detection of checkmate and stalemate scenarios
-Display of player color (white or black) and current game status
+*Real-time chess game with a responsive board
+*Support for two players connected via Socket.io
+*Detection of checkmate and stalemate scenarios
+*Display of player color (white or black) and current game status
 
 # Technology Stack
 
-React for building the user interface
-Chessboardjsx for rendering the chessboard
-Chess.js for handling game logic and legal moves
-Socket.io for real-time communication between players
+*React for building the user interface
+*Chessboardjsx for rendering the chessboard
+*Chess.js for handling game logic and legal moves
+*Socket.io for real-time communication between players
 
 ## Available Scripts
 
