@@ -3,8 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 A responsive and real-time chess game built using React, Chessboardjsx, and Socket.io. Play chess with a friend online as the game board updates in real-time while you make your moves. The app detects checkmate and stalemate scenarios, declaring the winner or a draw accordingly.
 
-[((![image](https://user-images.githubusercontent.com/70233363/229313787-3ab124d7-97e3-4b1f-9ae1-df203ff5016a.png)
-))](https://www.youtube.com/watch?v=64leF0kG4PI)]
+[![image](https://user-images.githubusercontent.com/70233363/229313787-3ab124d7-97e3-4b1f-9ae1-df203ff5016a.png)
+))](https://www.youtube.com/watch?v=64leF0kG4PI)
 
 ## Available Scripts
 
